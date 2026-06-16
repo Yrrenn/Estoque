@@ -24,8 +24,14 @@ public class estoque {  //declara a classe estoque
         switch (opcao) {
             case 1:
                 System.out.println("--Cadastrar Produto--");
-
                 System.out.println("Produto:");
+                teclado.nextLine();                                             //Eu tenho que fazer ele voltar ao inicio do sistema, pra poder listar os produtos
+                                                                                //Ta foda, to com dificuldade em array list e tenha que lembrar com usa o while
+
+                String produto = teclado.nextLine();                                    
+                descricao.add(produto); 
+            
+                System.out.println("Produto cadastrado com sucesso!"); 
               
 
 
