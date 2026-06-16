@@ -1,24 +1,24 @@
- import java.util.Scanner;
+ import java.util.Scanner;   //imorta o scanner
 
 
-public class estoque {
+public class estoque {  //declara a classe estoque 
 
    
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception { // declara o metodo main
 
-        Scanner teclado = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in); // cria um objeto scanner
 
-        System.out.println("---Bem Vindo ao Controle de Estoque---");
-        System.out.println("1.Cadastrar Produto");
-        System.out.println("2.Listar Produtos");
-        System.out.println("3.Excluir Produto");
-        System.out.println("0.Sair");
+        System.out.println("---Bem Vindo ao Controle de Estoque---");        
+        System.out.println("1.Cadastrar Produto");                              
+        System.out.println("2.Listar Produtos");                         // menu de navegacao
+        System.out.println("3.Excluir Produto");                             
+        System.out.println("0.Sair");                                   
 
 
-        int opcao = teclado.nextInt();
-        String produto;
-        int quantidade;
+        int opcao = teclado.nextInt();  // essa variavel recebe a opcao do usuario, usado para navegacao no menu, e a principal fucao do programa, pois a partir dela o usuario pode escolher o que deseja fazer. seu feio!
+        String produto; // 
+        int quantidade; // 
 
         
         switch (opcao) {
