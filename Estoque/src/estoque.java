@@ -1,5 +1,5 @@
- import java.util.Scanner;   //imorta o scanner
-
+import java.util.Scanner;   //imorta o scanner
+import java.ultil.ArrayList; // importa a classe ArrayList
 
 public class estoque {  //declara a classe estoque 
 
@@ -7,8 +7,10 @@ public class estoque {  //declara a classe estoque
 
     public static void main(String[] args) throws Exception { // declara o metodo main
 
+     
         Scanner teclado = new Scanner(System.in); // cria um objeto scanner
-
+         ArrayList<String> descricao = new ArrayList<String>(); // // Cria uma Lista que armazena os produtos (Array e um vetor multidimensional que aloca espacos na memoria)
+     
         System.out.println("---Bem Vindo ao Controle de Estoque---");        
         System.out.println("1.Cadastrar Produto");                              
         System.out.println("2.Listar Produtos");                         // menu de navegacao
@@ -17,8 +19,6 @@ public class estoque {  //declara a classe estoque
 
 
         int opcao = teclado.nextInt();  // essa variavel recebe a opcao do usuario, usado para navegacao no menu, e a principal fucao do programa, pois a partir dela o usuario pode escolher o que deseja fazer. seu feio!
-        String produto; // 
-        int quantidade; // 
 
         
         switch (opcao) {
@@ -26,10 +26,8 @@ public class estoque {  //declara a classe estoque
                 System.out.println("--Cadastrar Produto--");
 
                 System.out.println("Produto:");
-                String produto = teclado.next();
+              
 
-                System.out.println("Quantidade:");
-                int quantidade = teclado.nextInt();
 
                 // Lógica para cadastrar produto
                 break;
