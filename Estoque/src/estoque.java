@@ -9,10 +9,9 @@ public class estoque {  //declara a classe estoque
     public static void main(String[] args) throws Exception { // declara o metodo main
 
         Scanner teclado = new Scanner(System.in);  // cria um objeto scanner
-        
 
         ArrayList<String> descricao = new ArrayList<String>();   // Cria uma Lista que armazena os produtos (Array e um vetor multidimensional que aloca espacos na memoria)
-                
+       ArrayList<Integer> qtd = new ArrayList<Integer>();         
 
         int opcao = -1; // inicializa a variavel opcao com -1, para que o programa entre no loop while, caso escolha 0, o programa termina.
 
@@ -32,27 +31,40 @@ public class estoque {  //declara a classe estoque
 
         switch (opcao) {
             
-            case 1:
+            case 1:  // Lógica para cadastrar produto
+
                 System.out.println("--Cadastrar Produto--");
                 System.out.println("Nome do produto:");
-                teclado.nextLine();
-
+                teclado.nextLine();                                             //add o produto na lista
                 String produto = teclado.nextLine();
                 descricao.add(produto); 
-            
+
+
+                System.out.println("Adicione a quantidade de " + produto + " desejado(a) no estoque:");
+                int qtdProduto = teclado.nextInt();                                                             //add a quantidade do produto
+                qtd.add(qtdProduto);
                 System.out.println(produto + " cadastrado com sucesso!");
                 
-
-
-                // Lógica para cadastrar produto
                 break;
-            case 2:
-                System.out.println("Listar Produtos");
+            case 2: // Lógica para listar produtos
 
-                
-            
-        
-                // Lógica para listar produtos
+                System.out.println("--- Em estoque ---");
+ 
+                if (descricao.isEmpty()) {                                           //Aqui o if verifica se a lista de produtos esta vazia
+                    System.out.println("Nenhum produto em estoque ;-;");
+
+                } else {                                                            //Aqui caso o lista nao esteja vaazia, o "else" percorre e imprime os produtos e as quantiodade, o "for" faz esse trabalho
+
+                   for (int i = 0; i < descricao.size(); i++) {                     //O loop percorrer a lista de produtos, o "i" inicia em 0, e enquanto for menor que o tamanho da lista, ele incrementa o "i" em 1, ou seja, ele percorre toda a lista.
+
+            System.out.println(
+                descricao.get(i) + " - " +
+                qtd.get(i) + " unidades"                                            //
+            );
+
+                    }
+                }
+                System.out.println("-------------------------------------");
                 break;
             case 3:
                 System.out.println("Excluir Produto");
