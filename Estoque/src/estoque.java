@@ -46,6 +46,7 @@ public class estoque {  //declara a classe estoque
                 System.out.println(produto + " cadastrado com sucesso!");
                 
                 break;
+
             case 2: // Lógica para listar produtos
 
                 System.out.println("--- Em estoque ---");
@@ -64,15 +65,20 @@ public class estoque {  //declara a classe estoque
 
                     }
                 }
+
                 System.out.println("-------------------------------------");
                 break;
-            case 3:
-                System.out.println("Excluir Produto");
 
+            case 3: // Lógica para Atualizar estoque
+                System.out.println("--- Atualizar estoque ---");
+                System.out.println("Qual produto deseja atualizar?");
+                teclado.nextLine();
+               
+                       System.out.println("Nova quantidade:");
 
+                       
+                       System.out.println("Estoque atualizado com sucesso!");
 
-
-                // Lógica para excluir produto
                 break;
             case 0:
                 System.out.println("Saindo...");
